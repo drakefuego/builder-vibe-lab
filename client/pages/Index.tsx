@@ -199,9 +199,9 @@ export default function Index() {
                 </div>
                 <p className="text-white/90 mb-4">
                   "The real-time updates are incredibly accurate. Never missed a
-                  bus again!"
+                  UV Express or jeepney again!"
                 </p>
-                <p className="text-white/60">- James L.</p>
+                <p className="text-white/60">- Juan dela Cruz</p>
               </CardContent>
             </Card>
           </div>
