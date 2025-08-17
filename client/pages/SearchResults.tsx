@@ -42,39 +42,39 @@ export default function SearchResults() {
       setRoutes([
         {
           id: "1",
-          fare: "$3.25",
+          fare: "₱15.00",
           duration: "45 min",
-          buses: ["Bus 42", "Bus 15"],
+          buses: ["Jeepney 42", "Bus 15"],
           stops: [
-            "Central Station",
-            "Main St & 5th",
-            "University Plaza",
-            "Downtown Hub",
+            "EDSA-MRT Quezon Ave",
+            "SM North EDSA",
+            "Trinoma Mall",
+            "Ayala Avenue",
           ],
           walkingTime: "8 min",
           rating: 4.5,
         },
         {
           id: "2",
-          fare: "$2.75",
+          fare: "₱12.50",
           duration: "52 min",
-          buses: ["Bus 28", "Bus 9"],
+          buses: ["UV Express 28", "Jeepney 9"],
           stops: [
-            "Central Station",
-            "Park Ave",
-            "Shopping Center",
-            "Metro Plaza",
-            "Downtown Hub",
+            "EDSA-MRT Quezon Ave",
+            "Ortigas Center",
+            "Megamall",
+            "BGC Central Square",
+            "Ayala Avenue",
           ],
           walkingTime: "12 min",
           rating: 4.2,
         },
         {
           id: "3",
-          fare: "$4.50",
+          fare: "₱25.00",
           duration: "38 min",
-          buses: ["Express 101"],
-          stops: ["Central Station", "Express Hub", "Downtown Hub"],
+          buses: ["P2P Express"],
+          stops: ["EDSA-MRT Quezon Ave", "Ortigas", "Ayala Avenue"],
           walkingTime: "5 min",
           rating: 4.8,
         },
@@ -277,7 +277,7 @@ export default function SearchResults() {
               <div>
                 <h4 className="font-semibold mb-2">💡 Save Money</h4>
                 <p className="text-sm">
-                  Consider getting a day pass for $8.50 if you plan multiple
+                  Consider getting a Beep Card for ₱30.00 if you plan multiple
                   trips today.
                 </p>
               </div>
