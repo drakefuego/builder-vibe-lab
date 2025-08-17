@@ -180,8 +180,9 @@ export default function Index() {
                   ))}
                 </div>
                 <p className="text-white/90 mb-4">
-                  "RouteMate saved me 30 minutes every day by finding the perfect
-                  jeepney and MRT connections from Quezon City to Makati!"
+                  "RouteMate saved me 30 minutes every day by finding the
+                  perfect jeepney and MRT connections from Quezon City to
+                  Makati!"
                 </p>
                 <p className="text-white/60">- Maria Santos</p>
               </CardContent>
