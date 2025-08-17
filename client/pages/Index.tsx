@@ -2,8 +2,23 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Navigation, Clock, DollarSign, Bus, ArrowRight, Search, Star } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  MapPin,
+  Navigation,
+  Clock,
+  DollarSign,
+  Bus,
+  ArrowRight,
+  Search,
+  Star,
+} from "lucide-react";
 
 export default function Index() {
   const [fromLocation, setFromLocation] = useState("");
@@ -52,14 +67,17 @@ export default function Index() {
             </span>
           </h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
-            Find the best routes, track real-time buses, and discover the fastest way to reach your destination.
+            Find the best routes, track real-time buses, and discover the
+            fastest way to reach your destination.
           </p>
         </div>
 
         {/* Route Planner Card */}
         <Card className="max-w-2xl mx-auto bg-white/95 backdrop-blur-lg border-0 shadow-2xl animate-float">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl text-route-800">Plan Your Route</CardTitle>
+            <CardTitle className="text-2xl text-route-800">
+              Plan Your Route
+            </CardTitle>
             <CardDescription className="text-route-600">
               Enter your starting point and destination to get started
             </CardDescription>
@@ -75,7 +93,7 @@ export default function Index() {
                   className="pl-10 h-12 text-lg border-route-200 focus:border-route-500 focus:ring-route-500"
                 />
               </div>
-              
+
               <div className="flex justify-center">
                 <div className="w-8 h-8 bg-route-100 rounded-full flex items-center justify-center">
                   <ArrowRight className="w-4 h-4 text-route-600" />
@@ -93,7 +111,7 @@ export default function Index() {
               </div>
             </div>
 
-            <Button 
+            <Button
               onClick={handleSearch}
               className="w-full h-12 bg-gradient-purple hover:opacity-90 text-white text-lg font-semibold animate-pulse-glow"
               disabled={!fromLocation || !toLocation}
@@ -113,7 +131,8 @@ export default function Index() {
             </CardHeader>
             <CardContent>
               <p className="text-white/80 text-center">
-                Get accurate arrival times with live traffic and transit updates.
+                Get accurate arrival times with live traffic and transit
+                updates.
               </p>
             </CardContent>
           </Card>
@@ -125,7 +144,8 @@ export default function Index() {
             </CardHeader>
             <CardContent>
               <p className="text-white/80 text-center">
-                Compare costs across different transportation options and routes.
+                Compare costs across different transportation options and
+                routes.
               </p>
             </CardContent>
           </Card>
@@ -145,17 +165,23 @@ export default function Index() {
 
         {/* Testimonials */}
         <div className="mt-20 text-center">
-          <h3 className="text-3xl font-bold text-white mb-8">Loved by Commuters</h3>
+          <h3 className="text-3xl font-bold text-white mb-8">
+            Loved by Commuters
+          </h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="bg-white/10 backdrop-blur-lg border-white/20">
               <CardContent className="pt-6">
                 <div className="flex justify-center mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-white/90 mb-4">
-                  "RouteMate saved me 30 minutes every day by finding the perfect bus connections!"
+                  "RouteMate saved me 30 minutes every day by finding the
+                  perfect bus connections!"
                 </p>
                 <p className="text-white/60">- Sarah M.</p>
               </CardContent>
@@ -165,11 +191,15 @@ export default function Index() {
               <CardContent className="pt-6">
                 <div className="flex justify-center mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-white/90 mb-4">
-                  "The real-time updates are incredibly accurate. Never missed a bus again!"
+                  "The real-time updates are incredibly accurate. Never missed a
+                  bus again!"
                 </p>
                 <p className="text-white/60">- James L.</p>
               </CardContent>

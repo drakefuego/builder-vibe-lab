@@ -1,9 +1,23 @@
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Navigation, ArrowLeft, Clock, DollarSign, Bus, MapPin, Star } from "lucide-react";
+import {
+  Navigation,
+  ArrowLeft,
+  Clock,
+  DollarSign,
+  Bus,
+  MapPin,
+  Star,
+} from "lucide-react";
 
 interface RouteOption {
   id: string;
@@ -31,7 +45,12 @@ export default function SearchResults() {
           fare: "$3.25",
           duration: "45 min",
           buses: ["Bus 42", "Bus 15"],
-          stops: ["Central Station", "Main St & 5th", "University Plaza", "Downtown Hub"],
+          stops: [
+            "Central Station",
+            "Main St & 5th",
+            "University Plaza",
+            "Downtown Hub",
+          ],
           walkingTime: "8 min",
           rating: 4.5,
         },
@@ -40,7 +59,13 @@ export default function SearchResults() {
           fare: "$2.75",
           duration: "52 min",
           buses: ["Bus 28", "Bus 9"],
-          stops: ["Central Station", "Park Ave", "Shopping Center", "Metro Plaza", "Downtown Hub"],
+          stops: [
+            "Central Station",
+            "Park Ave",
+            "Shopping Center",
+            "Metro Plaza",
+            "Downtown Hub",
+          ],
           walkingTime: "12 min",
           rating: 4.2,
         },
@@ -63,7 +88,10 @@ export default function SearchResults() {
       <div className="min-h-screen bg-gradient-mesh">
         <header className="bg-white/10 backdrop-blur-lg border-b border-white/20">
           <div className="container mx-auto px-4 py-4 flex items-center">
-            <Link to="/" className="flex items-center text-white/80 hover:text-white mr-4">
+            <Link
+              to="/"
+              className="flex items-center text-white/80 hover:text-white mr-4"
+            >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Back
             </Link>
@@ -80,10 +108,12 @@ export default function SearchResults() {
           <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 animate-spin">
             <Navigation className="w-8 h-8 text-white" />
           </div>
-          <h2 className="text-2xl font-bold text-white mb-4">Finding Best Routes...</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Finding Best Routes...
+          </h2>
           <p className="text-white/80">
-            Searching from <span className="font-semibold">{fromLocation}</span> to{" "}
-            <span className="font-semibold">{toLocation}</span>
+            Searching from <span className="font-semibold">{fromLocation}</span>{" "}
+            to <span className="font-semibold">{toLocation}</span>
           </p>
         </div>
       </div>
@@ -96,7 +126,10 @@ export default function SearchResults() {
       <header className="bg-white/10 backdrop-blur-lg border-b border-white/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center text-white/80 hover:text-white mr-4">
+            <Link
+              to="/"
+              className="flex items-center text-white/80 hover:text-white mr-4"
+            >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Back
             </Link>
@@ -127,7 +160,10 @@ export default function SearchResults() {
                   <span className="font-medium">{toLocation}</span>
                 </CardDescription>
               </div>
-              <Button variant="outline" className="border-route-200 text-route-700">
+              <Button
+                variant="outline"
+                className="border-route-200 text-route-700"
+              >
                 New Search
               </Button>
             </div>
@@ -137,33 +173,44 @@ export default function SearchResults() {
         {/* Route Options */}
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-white mb-4">Route Options</h2>
-          
+
           {routes.map((route, index) => (
-            <Card key={route.id} className="bg-white/95 backdrop-blur-lg border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card
+              key={route.id}
+              className="bg-white/95 backdrop-blur-lg border-0 shadow-lg hover:shadow-xl transition-shadow"
+            >
               <CardContent className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-4">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-route-800">{route.fare}</div>
+                      <div className="text-2xl font-bold text-route-800">
+                        {route.fare}
+                      </div>
                       <div className="text-sm text-route-600">Total Fare</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-route-800">{route.duration}</div>
+                      <div className="text-2xl font-bold text-route-800">
+                        {route.duration}
+                      </div>
                       <div className="text-sm text-route-600">Travel Time</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-route-800">{route.walkingTime}</div>
+                      <div className="text-2xl font-bold text-route-800">
+                        {route.walkingTime}
+                      </div>
                       <div className="text-sm text-route-600">Walking</div>
                     </div>
                   </div>
-                  
+
                   <div className="text-right">
                     <div className="flex items-center mb-2">
                       <Star className="w-4 h-4 text-yellow-500 fill-current mr-1" />
                       <span className="font-semibold">{route.rating}</span>
                     </div>
                     {index === 0 && (
-                      <Badge className="bg-route-600 text-white">Recommended</Badge>
+                      <Badge className="bg-route-600 text-white">
+                        Recommended
+                      </Badge>
                     )}
                   </div>
                 </div>
@@ -176,7 +223,11 @@ export default function SearchResults() {
                   </h4>
                   <div className="flex space-x-2">
                     {route.buses.map((bus, idx) => (
-                      <Badge key={idx} variant="outline" className="border-route-300 text-route-700">
+                      <Badge
+                        key={idx}
+                        variant="outline"
+                        className="border-route-300 text-route-700"
+                      >
                         {bus}
                       </Badge>
                     ))}
@@ -191,7 +242,11 @@ export default function SearchResults() {
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {route.stops.map((stop, idx) => (
-                      <Badge key={idx} variant="secondary" className="bg-route-100 text-route-800">
+                      <Badge
+                        key={idx}
+                        variant="secondary"
+                        className="bg-route-100 text-route-800"
+                      >
                         {stop}
                       </Badge>
                     ))}
@@ -221,11 +276,16 @@ export default function SearchResults() {
             <div className="grid md:grid-cols-2 gap-4 text-white/90">
               <div>
                 <h4 className="font-semibold mb-2">💡 Save Money</h4>
-                <p className="text-sm">Consider getting a day pass for $8.50 if you plan multiple trips today.</p>
+                <p className="text-sm">
+                  Consider getting a day pass for $8.50 if you plan multiple
+                  trips today.
+                </p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">⏰ Peak Hours</h4>
-                <p className="text-sm">Avoid 7-9 AM and 5-7 PM for less crowded buses.</p>
+                <p className="text-sm">
+                  Avoid 7-9 AM and 5-7 PM for less crowded buses.
+                </p>
               </div>
             </div>
           </CardContent>

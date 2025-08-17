@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Navigation, Home, ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
@@ -18,12 +24,13 @@ export default function NotFound() {
             Looks like you've taken a wrong turn!
           </CardDescription>
         </CardHeader>
-        
+
         <CardContent className="space-y-6">
           <p className="text-route-700">
-            The page you're looking for doesn't exist, but don't worry - we'll help you get back on track.
+            The page you're looking for doesn't exist, but don't worry - we'll
+            help you get back on track.
           </p>
-          
+
           <div className="space-y-3">
             <Link to="/" className="block">
               <Button className="w-full h-12 bg-gradient-purple hover:opacity-90 text-white">
@@ -31,9 +38,9 @@ export default function NotFound() {
                 Go Home
               </Button>
             </Link>
-            
-            <Button 
-              variant="outline" 
+
+            <Button
+              variant="outline"
               onClick={() => window.history.back()}
               className="w-full h-12 border-route-200 text-route-700"
             >
@@ -41,9 +48,15 @@ export default function NotFound() {
               Go Back
             </Button>
           </div>
-          
+
           <div className="text-center text-sm text-route-600">
-            Need help? <Link to="/" className="text-route-700 hover:text-route-800 font-semibold">Contact Support</Link>
+            Need help?{" "}
+            <Link
+              to="/"
+              className="text-route-700 hover:text-route-800 font-semibold"
+            >
+              Contact Support
+            </Link>
           </div>
         </CardContent>
       </Card>

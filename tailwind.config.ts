@@ -77,9 +77,12 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
-        'gradient-purple': 'linear-gradient(135deg, hsl(var(--route-600)) 0%, hsl(var(--route-800)) 100%)',
-        'gradient-purple-light': 'linear-gradient(135deg, hsl(var(--route-100)) 0%, hsl(var(--route-300)) 100%)',
-        'gradient-mesh': 'radial-gradient(at 40% 20%, hsl(var(--route-600)) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(var(--route-500)) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(var(--route-700)) 0px, transparent 50%), radial-gradient(at 80% 50%, hsl(var(--route-400)) 0px, transparent 50%), radial-gradient(at 0% 100%, hsl(var(--route-600)) 0px, transparent 50%), radial-gradient(at 80% 100%, hsl(var(--route-800)) 0px, transparent 50%), radial-gradient(at 0% 0%, hsl(var(--route-500)) 0px, transparent 50%)',
+        "gradient-purple":
+          "linear-gradient(135deg, hsl(var(--route-600)) 0%, hsl(var(--route-800)) 100%)",
+        "gradient-purple-light":
+          "linear-gradient(135deg, hsl(var(--route-100)) 0%, hsl(var(--route-300)) 100%)",
+        "gradient-mesh":
+          "radial-gradient(at 40% 20%, hsl(var(--route-600)) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(var(--route-500)) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(var(--route-700)) 0px, transparent 50%), radial-gradient(at 80% 50%, hsl(var(--route-400)) 0px, transparent 50%), radial-gradient(at 0% 100%, hsl(var(--route-600)) 0px, transparent 50%), radial-gradient(at 80% 100%, hsl(var(--route-800)) 0px, transparent 50%), radial-gradient(at 0% 0%, hsl(var(--route-500)) 0px, transparent 50%)",
       },
       keyframes: {
         "accordion-down": {
@@ -98,19 +101,22 @@ export default {
             height: "0",
           },
         },
-        "float": {
+        float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
         },
         "pulse-glow": {
           "0%, 100%": { boxShadow: "0 0 5px hsl(var(--route-500))" },
-          "50%": { boxShadow: "0 0 20px hsl(var(--route-400)), 0 0 30px hsl(var(--route-500))" },
+          "50%": {
+            boxShadow:
+              "0 0 20px hsl(var(--route-400)), 0 0 30px hsl(var(--route-500))",
+          },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 3s ease-in-out infinite",
+        float: "float 3s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
     },
