@@ -103,7 +103,7 @@ export default function Index() {
               <div className="relative">
                 <Navigation className="absolute left-3 top-3 w-5 h-5 text-route-500" />
                 <Input
-                  placeholder="To (Destination address)"
+                  placeholder="To (e.g., BGC, Ortigas, Alabang, NAIA)"
                   value={toLocation}
                   onChange={(e) => setToLocation(e.target.value)}
                   className="pl-10 h-12 text-lg border-route-200 focus:border-route-500 focus:ring-route-500"
